@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+                    /* GENERAL */
+
+body {
+    width: 100vw;
+    margin: 0;
+    font-family: "Myriad pro";
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/*.row-r {
+    display: flex;
+    flex-flow: row-reverse wrap;
+}*/
+
+.col {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/*.col-r {
+    display: flex;
+    flex-flow: column-reverse wrap;
+}*/
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 60vw;
+    height: auto;
+    padding: 0 5vw 10vh 5vw;
+    border-right: 1px solid #3F8FBE;
+    border-left: 1px solid #3F8FBE;
+}
+
+            /* FORMULAIRE */
+
+label {
+    display: flex;
+    width: 100%;
+    margin: 15px 0 5px;
+    color: #333;
+    font-size: 16px;
+}
+
+input {
+    width: 20vw;
+    padding: 3px 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+textarea {
+    width: 20vw;
+    height: 10vh;
+    padding: 3px 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+select {
+    width: 21vw;
+    padding: 3px 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+form button {
+    width: 21vw;
+    height: 30px;
+    margin: 25px 0;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 800;
+    background-color: #00C2AE;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #008C7E;
+}
+
+section a {
+    padding: 5px 15px;
+    margin: 25px 0;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration: none;
+    background-color: #00C2AE;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+th {
+    padding: 15px 3vw;
+    background-color: #EEE;
+}
+
+td {
+    padding: 15px 0;
+    text-align: center;
+}
+
+                    /* COULEURS */
+
+
+.color-w {
+    background-color: #FFF;             /* blanc */
+}
+
+.color-b {
+    background-color: #000;             /* noir */
+}
+
+.color-0 {
+    background-color: #EDEFF7;          /* gris clair */
+}
+
+.color-1 {
+    background-color: #3F8FBE;          /* bleu */
+}
+
+.color-2 {
+    background-color: #BF4072;          /* rouge */
+}
+
+.color-3 {
+    background-color: #43C09C;          /* vert */
+}
+
+.color-4 {
+    background-color: #FFB639;          /* jaune */
+}
+
+.color-5 {
+    background-color: #B1B1B1;          /* gris moyen */
+}
+
+            /* NAV-BARRE */
+
+#nav-bar {
+    width: 100vw;
+    height: 50px;
+}
+
+#nav-bar ul {
+    width: 100%;
+    height: 50px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-bar li {
+    width: 120px;
+    height: 50px;
+}
+
+#nav-bar li:hover {
+    background-color: #333;
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+#nav-bar li a {
+    width: 100%;
+    height: 50px;
+    color: #FFF;
+    text-decoration: none;
+}

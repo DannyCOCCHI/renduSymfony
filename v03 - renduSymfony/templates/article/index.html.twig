@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des articles{% endblock %}
+
+{% block body %}
+    <section class="container col center">
+        <h1>Liste des articles</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Titre</th>
+                    <th>Accroche</th>
+                    <th>Contenu</th>
+                    <th>Featured_image</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for article in articles %}
+                <tr>
+                    <td>{{ article.id }}</td>
+                    <td>{{ article.titre }}</td>
+                    <td>{{ article.accroche }}</td>
+                    <td>{{ article.contenu }}</td>
+                    <td>{{ article.featuredImage }}</td>
+                    <td>
+                        <a href="{{ path('article_show', {'id': article.id}) }}">show</a>
+                        <a href="{{ path('article_edit', {'id': article.id}) }}">Modifier</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="6">Aucun compte</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="{{ path('article_new') }}">Ajouter un article</a>
+    </section>
+{% endblock %}
