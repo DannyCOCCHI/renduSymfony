@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ article.titre }}{% endblock %}
+
+{% block body %}
+    <section class="container col color-1">
+        <div class="art-img row center">
+            <img class="img" src="{{ asset('img/article/') }}{{ article.featuredImage }}" alt="Pas d'image">
+        </div>
+        <h1>{{ article.titre }}</h1>
+        <p class="acc">{{ article.accroche }}</p>
+        <p>{{ article.contenu|raw }}</p>
+
+        <div id="art-btn" class="row">
+            <a href="{{ path('article_index') }}" class="row center color-b">Retour à la liste</a>
+            {% if is_granted('ROLE_ADMIN') %}
+                <a href="{{ path('article_edit', {'id': article.id}) }}" class="row center color-b">Modifier l'article</a>
+                {{ include('article/_delete_form.html.twig') }}
+            {% endif %}
+        </div>
+
+        <div id="comment" class="row center">   
+            {% if is_granted('ROLE_USER') %}
+                <div id="form-com">
+                    {{ form(commentForm) }}
+                </div>
+            {% endif %}
+
+            <div id="art-com">
+                {% for Commentaire in Commentaire %}
+                    <p>{{ Commentaire.contenu }}</p>
+                {% endfor %}
+            </div>
+        </div>     
+
+    </section>
+{% endblock %}
