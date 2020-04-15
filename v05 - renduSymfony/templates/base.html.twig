@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>renduSymfony - {% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('style/main.css') }}" />
+        <script src="https://kit.fontawesome.com/55d95a3775.js" crossorigin="anonymous"></script>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body class="row center" style="background-image: url('{{ asset('img/body-bg.jpg') }}')">
+        <nav id="nav-bar" class="row color-b">
+            <ul class="row">
+                <li><a class="row center" href="{{ path('accueil') }}">ACCUEIL</a></li>
+                <li><a class="row center" href="{{ path('article_index') }}">Articles</a></li>
+                {% if is_granted('ROLE_USER') %}
+                    <li><a class="row center" href="{{ path('user_index') }}">Utilisateurs</a></li>
+                {% endif %}
+                {% if is_granted('ROLE_USER') %}
+                    <li><a class="row center" href="{{ path('app_logout') }}">Déconnexion</a></li>
+                {% else %}
+                    <li><a class="row center" href="{{ path('app_login') }}">Connexion</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

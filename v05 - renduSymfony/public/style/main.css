@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+                    /* GENERAL */
+
+body {
+    width: 100vw;
+    margin: 0;
+    font-family: 'Myriad Pro';
+    color: #f0f0f0;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/*.row-r {
+    display: flex;
+    flex-flow: row-reverse wrap;
+}*/
+
+.col {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/*.col-r {
+    display: flex;
+    flex-flow: column-reverse wrap;
+}*/
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 70vw;
+    height: auto;
+    padding: 1vh 1vw 1vh 1vw;
+}
+
+            /* FORMULAIRE */
+
+form {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+label {
+    display: flex;
+    width: 100%;
+    margin: 15px 0 5px;
+    color: #333;
+    font-size: 16px;
+}
+
+input {
+    width: 20vw;
+    padding: 3px 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+textarea {
+    width: 20vw;
+    height: 10vh;
+    padding: 3px 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+select {
+    width: 21vw;
+    padding: 3px 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+                    /* COULEURS */
+
+
+.color-w {
+    background-color: #f0f0f0;             /* blanc cassé */
+}
+
+.color-b {
+    background-color: #181818;             /* noir */
+}
+
+.color-1 {
+    background-color: #2d2d2d;             /* gris foncé */
+}
+
+.color-2 {
+    background-color: #444444;             /* gris clair */
+}
+
+.color-3 {
+    background-color: #6d97ec;          /* bleu */
+}
+
+            /* NAV-BARRE */
+
+#nav-bar {
+    width: 100vw;
+    height: 50px;
+}
+
+#nav-bar ul {
+    width: 100%;
+    height: 50px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-bar li {
+    width: 120px;
+    height: 50px;
+}
+
+#nav-bar li:hover {
+    background-color: #333;
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+#nav-bar li a {
+    width: 100%;
+    height: 50px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+                    /* PAGE ARTICLES INDEX */
+
+.add-article {
+    width: 9.8vw;
+    height: 34vh;
+    margin: 1vh 0.5vw;
+    border: 5px dashed #6d97ec;
+    color: #6d97ec;
+}
+
+#articles {
+    width: 68vw;
+    padding: 1vh 0.5vw;
+}
+
+#articles article {
+    width: 10.3vw;
+    height: 35vh;
+    margin: 1vh 0.5vw;
+    justify-content: space-between;
+}
+
+#articles div {
+    width: 100%;
+    height: 25px;
+}
+
+#articles img {
+    width: 100%;
+}

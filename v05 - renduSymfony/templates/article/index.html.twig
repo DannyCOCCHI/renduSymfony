@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des articles{% endblock %}
+
+{% block body %}
+    <section class="container col center color-1">
+        <h1>Liste des articles</h1>
+        <div id="articles" class="row color-2">
+            {% for article in articles %}
+                <article class="col color-1">
+                    <img src="{{ asset('img/article/') }}{{ article.featuredImage }}" alt="Oups :(">
+                    <div class="row center">{{ article.titre }}</div>
+                    <div class="row center">{{ article.accroche }}</div>
+                    <div class="row center color-b">
+                        <a href="{{ path('article_show', {'id': article.id}) }}">Voir l'article</a>
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <a href="{{ path('article_edit', {'id': article.id}) }}"><i class="fas fa-edit"></i></a>
+                            {{ include('article/_delete_form.html.twig') }}
+                        {% endif %}
+                    </div>
+                </article>
+            {% else %}
+                <tr>
+                    <td colspan="6">Aucun utilisateur enregistré</td>
+                </tr>
+            {% endfor %}
+            {% if is_granted('ROLE_ADMIN') %}
+                <a class="add-article row center" href="{{ path('article_new') }}"><i class="fas fa-plus fa-7x"></i></a>
+            {% endif %}
+        </div>
+
+    </section>
+{% endblock %}
